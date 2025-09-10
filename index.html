@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap"
+        rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="./src/css/index.css"> -->
+
+    <title>Agendamento Petshop</title>
+
+    <!-- <script src="./src/js/index.js" defer></script>
+    <script src="./src/js/data.js" defer></script> -->
+</head>
+
+<body>
+    <img src="./src/asset/logo.svg" alt="logo" class="logo">
+
+    <div class="container agendamentos">
+
+        <header>
+            <div class="titulo">
+                <h1>Sua agenda</h1>
+
+                <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+            </div>
+
+            <div class="data">
+                <i>
+                    <img src="./src/asset/calendar.svg">
+                </i>
+
+                <input type="date" name="date" id="dataListaAgendamento">
+            </div>
+        </header>
+
+        <section class="cronograma">
+            <div class="cronograma__cabecalho">
+                <div class="cronograma__titulo">
+                    <img src="./src/asset/sun-fog.svg">
+
+                    <h2>Manhã</h2>
+                </div>
+
+                <div class="cronograma__horario">
+                    09h-12h
+                </div>
+            </div>
+
+            <div class="cronograma__lista cronograma__lista-manha">
+                <div class="cronograma__lista__agendamento">
+                    <h2 class="cronograma__lista__agendamento__horario">
+                        <img src="./src/asset/clock-circle.svg" >
+                        09:00
+                    </h2>
+
+                    <div class="cronograma__lista__agendamento__nome">
+                        <div class="cronograma__lista__agendamento__nome__animal">Thor</div>
+
+                        <span>/</span>
+
+                        <div>Fernanda Costa</div>
+                    </div>
+
+                    <div class="cronograma__lista__agendamento__descricao">
+                        Vacinação
+                    </div>
+
+                    <div class="cronograma__lista__agendamento__remover">
+                        <a href="#" class="cronograma__lista__agendamento__excluir">Remover agendamento</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cronograma">
+            <div class="cronograma__cabecalho">
+                <div class="cronograma__titulo">
+                    <img src="./src/asset/cloud-sun.svg">
+
+                    <h2>Tarde</h2>
+                </div>
+
+                <div class="cronograma__horario">
+                    13h-18h
+                </div>
+            </div>
+
+            <div class="cronograma__lista cronograma__lista-tarde">
+                
+            </div>
+        </section>
+
+        <section class="cronograma">
+            <div class="cronograma__cabecalho">
+                <div class="cronograma__titulo">
+                    <img src="./src/asset/moon-stars.svg">
+
+                    <h2>Noite</h2>
+                </div>
+
+                <div class="cronograma__horario">
+                    19h-21h
+                </div>
+            </div>
+
+            <div class="cronograma__lista cronograma__lista-noite">
+                
+            </div>
+        </section>
+    </div>
+
+    <div class="popup">
+        <div class=" container__agendamento">
+            <div class="agendamento">
+                <button class="agendamento__btn-fechar-popup"></button>
+
+                <div class="agendamento__titulo">
+                    <h1>Agende um atendimento</h1>
+
+                    <p>Preencha os dados do cliente para ralizar o agendamento:</p>
+                </div>
+
+                <form>
+                    <div class="agendamento__area-formulario">
+                        <label for="nomeTutor">Nome do tutor</label>
+
+                        <div class="agendamento__area-formulario-input">
+                            <img src="./src/asset//user.svg" alt="ícone de usuário">
+                            <input id="nomeTutor" type="text" placeholder="Tutor">
+
+                            <div id="mensagemErroTutor" class="mensagemErro" style="display: none;">
+                                O nome do tutor é obrigatório. Por favor, digite o seu nome.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agendamento__area-formulario">
+                        <label for="nomePet">Nome do pet</label>
+
+                        <div class="agendamento__area-formulario-input">
+                            <img src="./src/asset/pet-paw.svg" alt="ícone de pet">
+                            <input id="nomePet" type="text" placeholder="Pet">
+
+                            <div id="mensagemErroPet" class="mensagemErro" style="display: none;">
+                                Por favor, digite o nome do seu pet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agendamento__area-formulario">
+                        <label for="telefone">Telefone</label>
+
+                        <div class="agendamento__area-formulario-input">
+                            <img src="./src/asset/phone.svg" alt="ícone de telefone">
+                            <input id="telefone" type="text" placeholder="(00) 00000-0000">
+
+                            <div id="mensagemErroTelefone" class="mensagemErro" style="display: none;">
+                                Por favor, digite um número para contato.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agendamento__area-formulario">
+                        <label for="descricaoServico">Descrição do serviço</label>
+
+                        <div class="agendamento__area-formulario-input">
+                            <textarea name="descricaoServico" id="descricaoServico" rows="4"
+                                placeholder="O que vai ser hoje?."></textarea>
+                        </div>
+
+                        <div id="mensagemErroDescricao" class="mensagemErro" style="display: none;">
+                            Por favor, digite qual vai ser o serviço feito no seu pet.
+                        </div>
+                    </div>
+
+                    <div class="agendamento__horario">
+                        <div class="agendamento__horario-wrapper">
+                            <label for="dataAgendamento">Data</label>
+
+                            <div class="agendamento__horario__data">
+
+                                <i>
+                                    <img src="./src/asset/calendar.svg">
+                                </i>
+
+                                <input type="date" name="date" id="dataAgendamento">
+                            </div>
+                        </div>
+
+                        <div class="agendamento__horario-wrapper">
+                            <label for="horaAgendamento">Hora</label>
+
+                            <div class="agendamento__horario__hora">
+                                <i>
+                                    <img src="./src/asset/clock-circle.svg">
+                                </i>
+
+                                <select id="horaAgendamento">
+                                    <!-- <option value="09">09:00</option>
+                                    <option value="10">10:00</option>
+                                    <option value="11">11:00</option>
+                                    <option value="12">12:00</option>
+                                    <option value="13">13:00</option>
+                                    <option value="14">14:00</option>
+                                    <option value="15">15:00</option>
+                                    <option value="16">16:00</option>
+                                    <option value="17">17:00</option>
+                                    <option value="18">18:00</option>
+                                    <option value="19">19:00</option>
+                                    <option value="20">20:00</option>
+                                    <option value="21">21:00</option> -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agendar">
+                        <button type="submit" id="btnAgendar">agendar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="novo-agendamento">
+        <button class="btn-novo-agendamento">Novo Agendamento</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+.novo-agendamento {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+
+    & .btn-novo-agendamento {
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-family: var(--font-family-title);
+
+        background-color: var(--content-brand);
+        color: #050505;
+
+        box-shadow: .1rem .1rem 1rem var(--background-brand);
+        border: none;
+        border-radius: .8rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .5s;
+
+        padding: 1.2rem;
+
+        &:hover {
+            background-color: var(--background-highlights);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .novo-agendamento {
+        background-color: #23242C;
+
+        padding: 1.8rem 2rem;
+        box-sizing: border-box;
+        border-top: solid .1rem var(--border-divisor-gray);
+
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+}

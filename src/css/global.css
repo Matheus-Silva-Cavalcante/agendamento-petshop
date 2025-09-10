@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+
+    --content-primary: #FFFFFF;
+    /* color */
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+
+    --background: #14151D;
+    --background-primary: #151515;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4FA;
+    --background-gray: #2E2C30;
+
+    --border-primary: #3e3c41;
+    --border-secondary: #86818C;
+    /* hover */
+    --border-brand: #9282FA;
+    /* selecionado */
+    --border-divisor: #353339;
+    --border-divisor-gray: #2E2C30;
+
+    --accent-blue: #027DF0;
+    --accent-blue-light: #16487A;
+    --accent-yellow: #F0DC02;
+    --accent-yellow-light: #756E1B;
+    --accent-orange: #f09102;
+    --accent-orange-light: #75501B;
+
+    --font-family-primary: "Inter", sans-serif;
+    --font-family-title: "Inter Tight", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar {
+    border-radius: 0 .5rem .5rem 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--border-divisor-gray);
+    border-radius: .5rem;
+}
+
+.logo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    padding: 1.2rem 2rem;
+
+    background-color: var(--background-gray);
+    border-radius: 0 0 .8rem 0;
+}
+
+.container {
+    max-width: 87rem;
+    padding: 5rem;
+    margin: auto;
+}
+
+button {
+    cursor: pointer;
+    transition: all .5s;
+
+    &:active {
+        transform: scale(.8);
+    }
+}
+
+option{
+    color: #494949;
+}
+
+option:disabled {
+    color: #7a7a7a;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 7rem 2rem 10rem;
+    }
+}

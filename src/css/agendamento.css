@@ -1,0 +1,222 @@
+.container__agendamento {
+    padding: 5rem 1rem;
+    margin: auto;
+    max-width: 48rem;
+}
+
+.agendamento {
+    background-color: var(--background-tertiary);
+    border-radius: .8rem;
+    padding: 4rem;
+    position: relative;
+
+    & .agendamento__btn-fechar-popup {
+        background-color: transparent;
+        border: none;
+        width: 4rem;
+        height: 4rem;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        background-image: url(../asset/close.svg);
+
+        &:hover {
+            background-image: url(../asset/close-hover.svg);
+        }
+    }
+
+    & .agendamento__titulo {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        margin-bottom: 2.5rem;
+
+        & h1 {
+            color: var(--content-primary);
+            font-size: 2.4rem;
+            font-family: var(--font-family-title);
+        }
+
+        & p {
+            color: var(--content-secondary);
+            font-size: 1.4rem;
+        }
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    .agendamento__area-formulario {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+
+        & label {
+            font-size: 1.4rem;
+            color: var(--content-primary);
+        }
+
+        & .agendamento__area-formulario-input {
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+
+            & img {
+                position: absolute;
+                left: 1.3rem;
+                top: 1rem;
+            }
+
+            & input {
+                padding: 1.2rem;
+                padding-inline: 4rem 0;
+            }
+
+            & textarea {
+                padding: 1.2rem;
+                resize: none;
+            }
+
+            & input,
+            & textarea {
+                background-color: var(--background-tertiary);
+                color: var(--content-secondary);
+                border: solid .1rem var(--border-primary);
+                border-radius: .8rem;
+                outline: none;
+                transition: all .5s;
+
+                font-size: 1.6rem;
+
+                flex: 1;
+
+                &:hover {
+                    border: solid .1rem var(--border-secondary);
+                }
+
+                &:focus-visible {
+                    border: solid .1rem var(--border-brand);
+                }
+            }
+
+            .inputErro {
+                border: solid .1rem #ce3232;
+            }
+
+        }
+
+        .mensagemErro {
+            margin-top: .5em;
+            font-size: 1.2rem;
+            color: #ce3232;
+
+            animation: campoVasio 1s both;
+        }
+    }
+
+    .agendamento__horario {
+        display: flex;
+        gap: 1.6rem;
+
+        & .agendamento__horario-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: .6rem;
+            flex: 1;
+
+            & label {
+                font-size: 1.4rem;
+                color: var(--content-primary);
+            }
+        }
+
+        & .agendamento__horario__data,
+        & .agendamento__horario__hora {
+            border: solid .1rem var(--border-primary);
+            border-radius: .8rem;
+            transition: .5s;
+
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            &:hover {
+                border: solid .1rem var(--border-secondary);
+            }
+
+            & input,
+            & select {
+                background-color: transparent;
+                color: var(--content-secondary);
+                font-size: 1.6rem;
+                border: none;
+                outline: none;
+
+                flex: 1;
+            }
+        }
+    }
+
+    .agendar {
+        display: flex;
+        justify-content: end;
+
+        & button {
+            border: none;
+            border-radius: .8rem;
+            padding: 1.2rem 2.4rem;
+            margin-top: 1rem;
+
+            text-transform: uppercase;
+            background-color: var(--background-brand);
+            color: #050505;
+
+            font-family: var(--font-family-title);
+            font-size: 1.6rem;
+            font-weight: bold;
+
+            transition: .5s;
+
+            &:hover {
+                background-color: var(--background-highlights);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .agendamento__horario {
+        flex-direction: column;
+    }
+}
+
+
+
+@keyframes campoVasio {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .3;
+    }
+
+    50% {
+        opacity: .6;
+    }
+
+    75% {
+        opacity: .8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
