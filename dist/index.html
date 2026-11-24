@@ -55,7 +55,10 @@
 
             <div class="cronograma__lista cronograma__lista-manha">
                 <div class="cronograma__lista__agendamento">
-                    <h2 class="cronograma__lista__agendamento__horario">09:00</h2>
+                    <h2 class="cronograma__lista__agendamento__horario">
+                        <img src="./src/asset/clock-circle.svg" >
+                        09:00
+                    </h2>
 
                     <div class="cronograma__lista__agendamento__nome">
                         <div class="cronograma__lista__agendamento__nome__animal">Thor</div>
@@ -70,7 +73,7 @@
                     </div>
 
                     <div class="cronograma__lista__agendamento__remover">
-                        <a href="#">Remover agendamento</a>
+                        <a href="#" class="cronograma__lista__agendamento__excluir">Remover agendamento</a>
                     </div>
                 </div>
             </div>
@@ -90,45 +93,7 @@
             </div>
 
             <div class="cronograma__lista cronograma__lista-tarde">
-                <div class="cronograma__lista__agendamento">
-                    <h2 class="cronograma__lista__agendamento__horario">13:00</h2>
-
-                    <div class="cronograma__lista__agendamento__nome">
-                        <div class="cronograma__lista__agendamento__nome__animal">Mel</div>
-
-                        <span>/</span>
-
-                        <div>João Costa</div>
-                    </div>
-
-                    <div class="cronograma__lista__agendamento__descricao">
-                        Vacinação
-                    </div>
-
-                    <div class="cronograma__lista__agendamento__remover">
-                        <a href="#">Remover agendamento</a>
-                    </div>
-                </div>
-
-                <div class="cronograma__lista__agendamento">
-                    <h2 class="cronograma__lista__agendamento__horario">15:00</h2>
-
-                    <div class="cronograma__lista__agendamento__nome">
-                        <div class="cronograma__lista__agendamento__nome__animal">Bella</div>
-
-                        <span>/</span>
-
-                        <div>Pedro Martins</div>
-                    </div>
-
-                    <div class="cronograma__lista__agendamento__descricao">
-                        Aplicação de Anti-pulgas
-                    </div>
-
-                    <div class="cronograma__lista__agendamento__remover">
-                        <a href="#">Remover agendamento</a>
-                    </div>
-                </div>
+                
             </div>
         </section>
 
@@ -146,43 +111,27 @@
             </div>
 
             <div class="cronograma__lista cronograma__lista-noite">
-                <div class="cronograma__lista__agendamento">
-                    <h2 class="cronograma__lista__agendamento__horario">20:00</h2>
-
-                    <div class="cronograma__lista__agendamento__nome">
-                        <div class="cronograma__lista__agendamento__nome__animal">Max</div>
-
-                        <span>/</span>
-
-                        <div>Camila Santos</div>
-                    </div>
-
-                    <div class="cronograma__lista__agendamento__descricao">
-                        Limpeza de Dentes
-                    </div>
-
-                    <div class="cronograma__lista__agendamento__remover">
-                        <a href="#">Remover agendamento</a>
-                    </div>
-                </div>
+                
             </div>
         </section>
     </div>
 
     <div class="popup">
-        <div class=" container__agenda">
-            <div class="agenda">
-                <div class="agenda__titulo">
+        <div class=" container__agendamento">
+            <div class="agendamento">
+                <button class="agendamento__btn-fechar-popup"></button>
+
+                <div class="agendamento__titulo">
                     <h1>Agende um atendimento</h1>
 
                     <p>Preencha os dados do cliente para ralizar o agendamento:</p>
                 </div>
 
                 <form>
-                    <div class="agenda__area-formulario">
+                    <div class="agendamento__area-formulario">
                         <label for="nomeTutor">Nome do tutor</label>
 
-                        <div class="agenda__area-formulario-input">
+                        <div class="agendamento__area-formulario-input">
                             <img src="./src/asset//user.svg" alt="ícone de usuário">
                             <input id="nomeTutor" type="text" placeholder="Tutor">
 
@@ -192,10 +141,10 @@
                         </div>
                     </div>
 
-                    <div class="agenda__area-formulario">
+                    <div class="agendamento__area-formulario">
                         <label for="nomePet">Nome do pet</label>
 
-                        <div class="agenda__area-formulario-input">
+                        <div class="agendamento__area-formulario-input">
                             <img src="./src/asset/pet-paw.svg" alt="ícone de pet">
                             <input id="nomePet" type="text" placeholder="Pet">
 
@@ -205,10 +154,10 @@
                         </div>
                     </div>
 
-                    <div class="agenda__area-formulario">
+                    <div class="agendamento__area-formulario">
                         <label for="telefone">Telefone</label>
 
-                        <div class="agenda__area-formulario-input">
+                        <div class="agendamento__area-formulario-input">
                             <img src="./src/asset/phone.svg" alt="ícone de telefone">
                             <input id="telefone" type="text" placeholder="(00) 00000-0000">
 
@@ -218,10 +167,10 @@
                         </div>
                     </div>
 
-                    <div class="agenda__area-formulario">
+                    <div class="agendamento__area-formulario">
                         <label for="descricaoServico">Descrição do serviço</label>
 
-                        <div class="agenda__area-formulario-input">
+                        <div class="agendamento__area-formulario-input">
                             <textarea name="descricaoServico" id="descricaoServico" rows="4"
                                 placeholder="O que vai ser hoje?."></textarea>
                         </div>
@@ -231,11 +180,11 @@
                         </div>
                     </div>
 
-                    <div class="agenda__horario">
-                        <div class="agenda__horario-wrapper">
+                    <div class="agendamento__horario">
+                        <div class="agendamento__horario-wrapper">
                             <label for="dataAgendamento">Data</label>
 
-                            <div class="agenda__horario__data">
+                            <div class="agendamento__horario__data">
 
                                 <i>
                                     <img src="./src/asset/calendar.svg">
@@ -245,10 +194,10 @@
                             </div>
                         </div>
 
-                        <div class="agenda__horario-wrapper">
+                        <div class="agendamento__horario-wrapper">
                             <label for="horaAgendamento">Hora</label>
 
-                            <div class="agenda__horario__hora">
+                            <div class="agendamento__horario__hora">
                                 <i>
                                     <img src="./src/asset/clock-circle.svg">
                                 </i>
